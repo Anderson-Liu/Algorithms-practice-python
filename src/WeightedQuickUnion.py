@@ -2,7 +2,7 @@
 # module Union-Find
 
 """
- This is the second algorithm of three algorithms that about how
+ This is the third algorithm of three algorithms that about how
  to resolve the union-find problem.
 
  The contents of the three file include in file directory:
@@ -19,7 +19,7 @@
 import time
 
 
-class QuickUnion:
+class WeightedQuickUnion:
     ids = []
     """ The id of each component """
     levels = []
@@ -62,17 +62,33 @@ class QuickUnion:
         """
         proot = cls.find(p)
         qroot = cls.find(q)
-        cls.ids[proot] = qroot
-        cls.weights[qroot] += cls.weights[proot]
 
         levelp = cls.levels[proot]
         levelq = cls.levels[qroot]
-        if levelq < levelp:
-            cls.levels[q] = levelp + 1
-        elif levelq == levelp:
-            cls.levels[q] += 1
+
+        weight_p = cls.weights[proot]
+        weight_q = cls.weights[qroot]
+
+        if weight_p < weight_q:
+            cls.ids[proot] = qroot
+            cls.weights[qroot] += weight_p
+            if levelq > levelp:
+                return
+            elif levelq == levelp:
+                cls.levels[qroot] += 1
+            else:
+                cls.levels[qroot] = levelp + 1
+
         else:
-            return
+            cls.ids[qroot] = proot;
+            cls.weights[proot] += weight_q
+            if levelq > levelp:
+                cls.levels[proot] = levelq + 1
+            elif levelq == levelp:
+                cls.levels[proot] += 1
+            else:
+                return
+
 
     @classmethod
     def iter_tree(cls, scale):
@@ -134,7 +150,7 @@ class QuickUnion:
         self.iter_tree(scale)
 
 
-quickFind = QuickUnion()
-print("The max level is:", max(quickFind.levels), "\n",
-      "The max weight is", max(quickFind.weights), "\n",
+weightedquickFind = WeightedQuickUnion()
+print("The max level is:", max(weightedquickFind.levels), "\n",
+      "The max weight is", max(weightedquickFind.weights), "\n",
       "Time elapsed: ", time.process_time(), "seconds")
