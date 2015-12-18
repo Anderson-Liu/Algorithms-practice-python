@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module Union-Find
-
+# License: GPL v2
+# Author: andersion.v@gmail.com
 """
  This is the third algorithm of three algorithms that about how
  to resolve the union-find problem.
@@ -15,9 +16,8 @@
 # import time
 # class
 
-
 import time
-
+import sys
 
 class WeightedQuickUnion:
     ids = []
@@ -117,15 +117,19 @@ class WeightedQuickUnion:
         inputscale = input("Please input the scale of input file(Tiny, Medium, Large)\n Please type: T, M, L ?  ")
         """ Input the scale of input file. """
         scale = 0
+        group = 0
         pathname = ""
         if "T".__eq__(inputscale):
             scale = 10
+            group = 11
             pathname = "../file/tinyUF.txt"
         elif "M".__eq__(inputscale):
             scale = 625
+            group = 900
             pathname = "../file/mediumUF.txt"
         elif "L".__eq__(inputscale):
             scale = 1000000
+            group = 2000000
             pathname = "../file/largeUF.txt"
         else:
             print("Input error! Please input T、M or L!")
@@ -135,7 +139,17 @@ class WeightedQuickUnion:
             self.ids.append(i)
             self.levels.append(1)
             self.weights.append(1)
+        """
+        self.ids = [x for x in range(scale)]
+        self.levels = [1 for x in range(scale)]
+        self.weights= [1 for x in range(scale)]
+        """
 
+        readed = 0
+        elapsed = 0
+
+        j = "#"
+        i = 0.01
         f = open(pathname)
         for line in f:
             data = line.split()
@@ -144,7 +158,19 @@ class WeightedQuickUnion:
             if self.connected(p, q):
                 continue
             self.union(p, q)
-            print(p, q)
+            # print(p, q)
+
+            readed += 1
+
+            j += '#'
+            # sys.stdout.write(str(int((readed / scale) * 100)) + '%  ||' + j + '->' + "\r")
+            test = float(readed / group)
+            if float(readed / group) > i:
+                sys.stdout.write(str(int((readed / scale) * 100)) + '%  ||' + j + '->' + "\r")
+                i = ("%.2f" % test)
+                print()
+                sys.stdout.flush()
+
 
         f.close()
         self.iter_tree(scale)

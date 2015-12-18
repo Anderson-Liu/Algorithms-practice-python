@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module Union-Find
-
+# License: GPL v2
+# Author: andersion.v@gmail.com
 """
  This is the second algorithm of three algorithms that about how
  to resolve the union-find problem.
@@ -119,7 +120,12 @@ class QuickUnion:
             self.ids.append(i)
             self.levels.append(1)
             self.weights.append(1)
+        """
 
+        self.ids = [x for x in xrange(scale)]
+        self.levels = [1 for x in xrange(scale)]
+        self.weights= [1 for x in xrange(scale)]
+        """
         f = open(pathname)
         for line in f:
             data = line.split()

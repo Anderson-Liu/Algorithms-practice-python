@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module Union-Find
-
+# License: GPL v2
+# Author: andersion.v@gmail.com
 """
  This is the first algorithm of three algorithms that about how
  to resolve the union-find problem.
