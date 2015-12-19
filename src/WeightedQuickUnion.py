@@ -167,7 +167,7 @@ class WeightedQuickUnion:
             test = float(readed / group)
             if float(readed / group) > i:
                 sys.stdout.write(str(int((readed / scale) * 100)) + '%  ||' + j + '->' + "\r")
-                i = ("%.2f" % test)
+                i = float("%.2f" % test) + 0.01
                 print()
                 sys.stdout.flush()
 
