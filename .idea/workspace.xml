@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d948c99a-3510-4f49-863c-e77ba33d8b70" name="Default" comment="Fix the counter of levels and weights.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BubbleSort.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Fibonacci.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WeightedQuickUnion.py" afterPath="$PROJECT_DIR$/src/WeightedQuickUnion.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fibonacci.py" afterPath="$PROJECT_DIR$/src/Fibonacci.py" />
     </list>
     <ignored path="Algorithms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Algorithms$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1450535554000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Algorithms$QuickUnion.coverage" NAME="QuickUnion Coverage Results" MODIFIED="1450370199959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Algorithms$Test.coverage" NAME="Test Coverage Results" MODIFIED="1450534699833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Algorithms$Fibonacci.coverage" NAME="Fibonacci Coverage Results" MODIFIED="1450536576959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Algorithms$Fibonacci.coverage" NAME="Fibonacci Coverage Results" MODIFIED="1450537020016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Algorithms$QuickFind.coverage" NAME="QuickFind Coverage Results" MODIFIED="1450370215172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Algorithms$BubbleSort.coverage" NAME="BubbleSort Coverage Results" MODIFIED="1450504493588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
@@ -59,8 +56,8 @@
       <file leaf-file-name="Fibonacci.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Fibonacci.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37795275">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.71653545">
+              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -1056,8 +1053,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fibonacci.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37795275">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.71653545">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding />
         </state>
       </provider>

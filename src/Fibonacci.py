@@ -1,3 +1,4 @@
+import time
 class Solution:
 
     pre = 0
@@ -55,6 +56,7 @@ class Solution:
         return cls.pre
 
 
-n = 100000
+n = 1000
 solution = Solution()
 print(solution.fibonacci(n))
+print(time.process_time(), "seconds")
